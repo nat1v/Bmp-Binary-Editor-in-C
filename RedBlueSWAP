@@ -31,7 +31,7 @@ int main(){
   int tinggi = *(int *)&header[22]; //offset byte ke 22; source::height, atau tinggi
   int bpp =  *(int *)&header[28]; ///offset byte ke 28; source::bpp atau bits per pixel
 
-  if (bpp =! 32){ // mengecek apakah file adalah 32 bit bmp; jika bukan....
+  if (bpp != 32){ // mengecek apakah file adalah 32 bit bmp; jika bukan....
     printf("ini bukan 32-bit bmp");
     fclose(imageIn);
     fclose(imageOut);
